@@ -2,7 +2,7 @@
 
 const express = require("express");
 const router = express.Router(); // To use the express Router
-const auth = require("../../middleware/auth");
+const auth = require("../../middleware/auth").default;
 const request = require("request");
 const config = require("config");
 
