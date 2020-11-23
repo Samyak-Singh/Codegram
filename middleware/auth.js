@@ -1,7 +1,7 @@
-import { verify } from "jsonwebtoken";
-import { get } from "config"; //We need to get the JwtSecret
+const jwt = require("jsonwebtoken");
+const config = require("config"); //We need to get the JwtSecret
 
-export default function (req, res, next) {
+module.exports = function (req, res, next) {
   // next is like the callback...
 
   //Get token from the header
@@ -14,7 +14,7 @@ export default function (req, res, next) {
 
   //Verify Token
   try {
-    const decoded = verify(token, get("jwtSecret")); // this will decode the token
+    const decoded = jwt.verify(token, config.get("jwtSecret")); // this will decode the token
     req.user = decoded.user; //payload's user
     next();
   } catch (err) {
