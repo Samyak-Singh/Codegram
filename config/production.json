@@ -1,0 +1,7 @@
+{
+    "mongoURI": "mongodb+srv://samyak123:samyak123@cluster0.rca7j.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "mysamyaktoken",
+    "githubClientId": "ed4cea4e2ebf9cb8bd1e",
+    "githubSecret": "9101f7fd43161741275b4ff6143627760dd3a7a9"
+  }
+  
